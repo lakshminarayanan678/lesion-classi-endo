@@ -4,3 +4,6 @@
 [submodule "dinovit"]
 	path = dinovit
 	url = https://github.com/lakshminarayanan678/dinovit_lesionclassi_endo.git
+[submodule "eva02_lesionclassifi_endoscopy"]
+	path = eva02_lesionclassifi_endoscopy
+	url = https://github.com/lakshminarayanan678/eva02_lesionclassifi_endoscopy.git
