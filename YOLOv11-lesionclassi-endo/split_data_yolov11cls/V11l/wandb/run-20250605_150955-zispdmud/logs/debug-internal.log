@@ -1,0 +1,16 @@
+{"time":"2025-06-05T15:09:55.278968047+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/V11l/wandb/run-20250605_150955-zispdmud/logs/debug-core.log"}
+{"time":"2025-06-05T15:09:55.97347448+05:30","level":"INFO","msg":"created new stream","id":"zispdmud"}
+{"time":"2025-06-05T15:09:55.973529132+05:30","level":"INFO","msg":"stream: started","id":"zispdmud"}
+{"time":"2025-06-05T15:09:55.973685372+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"zispdmud"}
+{"time":"2025-06-05T15:09:55.973738347+05:30","level":"INFO","msg":"handler: started","stream_id":"zispdmud"}
+{"time":"2025-06-05T15:09:55.973870393+05:30","level":"INFO","msg":"sender: started","stream_id":"zispdmud"}
+{"time":"2025-06-05T15:09:56.435527022+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-05T15:09:58.96204751+05:30","level":"WARN","msg":"sender: sendUseArtifact: job builder disabled, skipping"}
+{"time":"2025-06-05T15:10:03.986776118+05:30","level":"INFO","msg":"stream: closing","id":"zispdmud"}
+{"time":"2025-06-05T15:10:03.986846998+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-05T15:10:03.986906096+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-05T15:10:05.372611209+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-05T15:10:05.880861498+05:30","level":"INFO","msg":"handler: closed","stream_id":"zispdmud"}
+{"time":"2025-06-05T15:10:05.880970477+05:30","level":"INFO","msg":"sender: closed","stream_id":"zispdmud"}
+{"time":"2025-06-05T15:10:05.880950846+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"zispdmud"}
+{"time":"2025-06-05T15:10:05.881158715+05:30","level":"INFO","msg":"stream: closed","id":"zispdmud"}

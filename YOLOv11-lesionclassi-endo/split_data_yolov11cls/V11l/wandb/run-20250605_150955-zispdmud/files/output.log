@@ -1,0 +1,113 @@
+New https://pypi.org/project/ultralytics/8.3.150 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.62 🚀 Python-3.8.10 torch-2.4.1+cu118 CUDA:0 (NVIDIA GeForce RTX 3090, 24126MiB)
+[34m[1mengine/trainer: [0mtask=classify, mode=train, model=yolo11l-cls.pt, data=/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1, epochs=75, time=None, patience=100, batch=16, imgsz=224, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/classify/train
+[34m[1mtrain:[0m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1/train... found 37783 images in 15 classes: ERROR ❌️ requires 3 classes, not 15
+[34m[1mval:[0m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1/val... found 8101 images in 15 classes: ERROR ❌️ requires 3 classes, not 15
+[34m[1mtest:[0m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1/test... found 8099 images in 3 classes ✅
+Overriding model.yaml nc=80 with nc=3
+
+                   from  n    params  module                                       arguments
+  0                  -1  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]
+  1                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  2                  -1  2    173824  ultralytics.nn.modules.block.C3k2            [128, 256, 2, True, 0.25]
+  3                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]
+  4                  -1  2    691712  ultralytics.nn.modules.block.C3k2            [256, 512, 2, True, 0.25]
+  5                  -1  1   2360320  ultralytics.nn.modules.conv.Conv             [512, 512, 3, 2]
+  6                  -1  2   2234368  ultralytics.nn.modules.block.C3k2            [512, 512, 2, True]
+  7                  -1  1   2360320  ultralytics.nn.modules.conv.Conv             [512, 512, 3, 2]
+  8                  -1  2   2234368  ultralytics.nn.modules.block.C3k2            [512, 512, 2, True]
+  9                  -1  2   1455616  ultralytics.nn.modules.block.C2PSA           [512, 512, 2]
+ 10                  -1  1    661763  ultralytics.nn.modules.head.Classify         [512, 3]
+YOLO11l-cls summary: 309 layers, 12,838,467 parameters, 12,838,467 gradients, 49.8 GFLOPs
+Transferred 492/494 items from pretrained weights
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mScanning /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1/train... 5188 images, 0 corrupt:  14%|█▎        | 5188/37783 [00:03<00:19, 169[0m
+Traceback (most recent call last):
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/dataset.py", line 489, in verify_images
+    cache = load_dataset_cache_file(path)  # attempt to load a *.cache file
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/utils.py", line 706, in load_dataset_cache_file
+    cache = np.load(str(path), allow_pickle=True).item()  # load dict
+  File "/home/endodl/.local/lib/python3.8/site-packages/numpy/lib/npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1/train.cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 851, in next
+    item = self._items.popleft()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/train.py", line 20, in <module>
+    results = model.train(data="/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1", epochs=75, imgsz=224)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 806, in train
+    self.trainer.train()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 322, in _do_train
+    self._setup_train(world_size)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 286, in _setup_train
+    self.train_loader = self.get_dataloader(self.trainset, batch_size=batch_size, rank=LOCAL_RANK, mode="train")
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/models/yolo/classify/train.py", line 82, in get_dataloader
+    dataset = self.build_dataset(dataset_path, mode)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/models/yolo/classify/train.py", line 77, in build_dataset
+    return ClassificationDataset(root=img_path, args=self.args, augment=mode == "train", prefix=mode)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/dataset.py", line 443, in __init__
+    self.samples = self.verify_images()  # filter out bad images
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/dataset.py", line 506, in verify_images
+    for sample, nf_f, nc_f, msg in pbar:
+  File "/home/endodl/.local/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 856, in next
+    self._cond.wait(timeout)
+  File "/usr/lib/python3.8/threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/dataset.py", line 489, in verify_images
+    cache = load_dataset_cache_file(path)  # attempt to load a *.cache file
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/utils.py", line 706, in load_dataset_cache_file
+    cache = np.load(str(path), allow_pickle=True).item()  # load dict
+  File "/home/endodl/.local/lib/python3.8/site-packages/numpy/lib/npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1/train.cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 851, in next
+    item = self._items.popleft()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/train.py", line 20, in <module>
+    results = model.train(data="/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/data1", epochs=75, imgsz=224)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 806, in train
+    self.trainer.train()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 322, in _do_train
+    self._setup_train(world_size)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 286, in _setup_train
+    self.train_loader = self.get_dataloader(self.trainset, batch_size=batch_size, rank=LOCAL_RANK, mode="train")
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/models/yolo/classify/train.py", line 82, in get_dataloader
+    dataset = self.build_dataset(dataset_path, mode)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/models/yolo/classify/train.py", line 77, in build_dataset
+    return ClassificationDataset(root=img_path, args=self.args, augment=mode == "train", prefix=mode)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/dataset.py", line 443, in __init__
+    self.samples = self.verify_images()  # filter out bad images
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/dataset.py", line 506, in verify_images
+    for sample, nf_f, nc_f, msg in pbar:
+  File "/home/endodl/.local/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 856, in next
+    self._cond.wait(timeout)
+  File "/usr/lib/python3.8/threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt

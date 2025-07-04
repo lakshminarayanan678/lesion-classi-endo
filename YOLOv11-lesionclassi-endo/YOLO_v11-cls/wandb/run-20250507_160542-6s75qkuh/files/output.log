@@ -1,0 +1,462 @@
+New https://pypi.org/project/ultralytics/8.3.128 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.62 🚀 Python-3.8.10 torch-2.4.1+cu118 CUDA:0 (NVIDIA GeForce RTX 3090, 24126MiB)
+[34m[1mengine/trainer: [39m[22mtask=classify, mode=train, model=yolo11n-cls.pt, data=/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data, epochs=50, time=None, patience=100, batch=16, imgsz=224, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train5, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/classify/train5
+[34m[1mtrain:[39m[22m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/train... found 40122 images in 3 classes ✅
+[34m[1mval:[39m[22m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/val... found 10105 images in 3 classes ✅
+[34m[1mtest:[39m[22m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/test... found 3756 images in 3 classes ✅
+Overriding model.yaml nc=80 with nc=3
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 10                  -1  1    334083  ultralytics.nn.modules.head.Classify         [256, 3]
+YOLO11n-cls summary: 151 layers, 1,534,947 parameters, 1,534,947 gradients, 3.3 GFLOPs
+Transferred 234/236 items from pretrained weights
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [39m[22mchecks passed ✅
+[34m[1mtrain: [39m[22mScanning /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/train... 40122 images, 0 corrupt: 100%|██████████| 40122/40122 [00:00<?, ?it/s]
+[34m[1mval: [39m[22mScanning /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/val... 10105 images, 0 corrupt: 100%|██████████| 10105/10105 [00:00<?, ?it/s]
+       1/50     0.262G      1.083         16        224:   0%|          | 6/2508 [00:00<03:25, 12.20it/s]
+[34m[1moptimizer:[39m[22m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[39m[22m SGD(lr=0.01, momentum=0.9) with parameter groups 39 weight(decay=0.0), 40 weight(decay=0.0005), 40 bias(decay=0.0)
+Image sizes 224 train, 224 val
+Using 8 dataloader workers
+Logging results to [1mruns/classify/train5
+Starting training for 50 epochs...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       1/50     0.264G      0.287         10        224: 100%|██████████| 2508/2508 [00:48<00:00, 52.13it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 48.60it/s]
+       2/50     0.264G     0.1431         16        224:   0%|          | 7/2508 [00:00<00:38, 65.68it/s]
+                   all      0.931          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       2/50     0.264G     0.2336         10        224: 100%|██████████| 2508/2508 [00:42<00:00, 58.56it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 49.44it/s]
+       3/50     0.264G     0.2634         16        224:   2%|▏         | 42/2508 [00:00<00:39, 62.60it/s]
+                   all      0.922          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       3/50     0.264G     0.2922         10        224: 100%|██████████| 2508/2508 [00:42<00:00, 59.53it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 50.91it/s]
+       4/50     0.264G     0.3429         16        224:   0%|          | 7/2508 [00:00<00:39, 62.70it/s]
+                   all      0.907          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       4/50     0.264G     0.4985         10        224: 100%|██████████| 2508/2508 [00:42<00:00, 59.48it/s]
+
+
+               classes   top1_acc   top5_acc:  97%|█████████▋| 308/316 [00:05<00:00, 52.80it/s]
+                   all      0.865          1
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 52.19it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       5/50     0.266G      0.428         10        224: 100%|██████████| 2508/2508 [00:43<00:00, 57.83it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 51.36it/s]
+       6/50     0.266G     0.4197         16        224:   1%|          | 18/2508 [00:00<00:45, 54.26it/s]
+                   all      0.858          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       6/50     0.266G     0.3569         10        224: 100%|██████████| 2508/2508 [00:43<00:00, 57.53it/s]
+
+
+
+               classes   top1_acc   top5_acc:  99%|█████████▊| 312/316 [00:06<00:00, 45.52it/s]
+                   all      0.878          1
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 47.08it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       7/50     0.266G     0.3397         10        224: 100%|██████████| 2508/2508 [00:45<00:00, 54.63it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 47.35it/s]
+       8/50     0.264G     0.2959         16        224:   2%|▏         | 43/2508 [00:00<00:50, 49.05it/s]
+                   all      0.888          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       8/50     0.264G     0.3156         10        224: 100%|██████████| 2508/2508 [00:45<00:00, 55.51it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 47.05it/s]
+       9/50     0.266G     0.2706         16        224:   2%|▏         | 38/2508 [00:00<00:43, 56.47it/s]
+                   all      0.909          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       9/50     0.266G     0.3023         10        224: 100%|██████████| 2508/2508 [00:44<00:00, 56.37it/s]
+
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 46.69it/s]
+      10/50     0.266G     0.2957         16        224:   3%|▎         | 69/2508 [00:01<00:41, 59.15it/s]
+                   all      0.916          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      10/50     0.266G      0.287         10        224: 100%|██████████| 2508/2508 [00:43<00:00, 57.11it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:06<00:00, 46.70it/s]
+      11/50     0.266G      0.261         16        224:   1%|          | 13/2508 [00:00<00:41, 60.15it/s]
+                   all      0.921          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      11/50     0.266G     0.2706         10        224: 100%|██████████| 2508/2508 [00:44<00:00, 56.83it/s]
+               classes   top1_acc   top5_acc:   4%|▍         | 12/316 [00:00<00:03, 92.82it/s]
+Traceback (most recent call last):
+  File "/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/train.py", line 19, in <module>
+    results = model.train(data="/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data", epochs=50, imgsz=224)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 806, in train
+    self.trainer.train()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 432, in _do_train
+    self.metrics, self.fitness = self.validate()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 605, in validate
+    metrics = self.validator(self)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/validator.py", line 180, in __call__
+    preds = model(batch["img"], augment=augment)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 114, in forward
+    return self.predict(x, *args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 132, in predict
+    return self._predict_once(x, profile, visualize, embed)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 153, in _predict_once
+    x = m(x)  # run
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/modules/block.py", line 1042, in forward
+    b = self.m(b)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/modules/block.py", line 956, in forward
+    x = x + self.attn(x) if self.add else self.attn(x)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/modules/block.py", line 919, in forward
+    x = (v @ attn.transpose(-2, -1)).view(B, C, H, W) + self.pe(v.reshape(B, C, H, W))
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/modules/conv.py", line 51, in forward
+    return self.act(self.bn(self.conv(x)))
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 143, in forward
+    self._check_input_dim(input)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 425, in _check_input_dim
+    if input.dim() != 4:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/train.py", line 19, in <module>
+    results = model.train(data="/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data", epochs=50, imgsz=224)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 806, in train
+    self.trainer.train()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 432, in _do_train
+    self.metrics, self.fitness = self.validate()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 605, in validate
+    metrics = self.validator(self)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/validator.py", line 180, in __call__
+    preds = model(batch["img"], augment=augment)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 114, in forward
+    return self.predict(x, *args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 132, in predict
+    return self._predict_once(x, profile, visualize, embed)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 153, in _predict_once
+    x = m(x)  # run
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/modules/block.py", line 1042, in forward
+    b = self.m(b)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/modules/block.py", line 956, in forward
+    x = x + self.attn(x) if self.add else self.attn(x)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/modules/block.py", line 919, in forward
+    x = (v @ attn.transpose(-2, -1)).view(B, C, H, W) + self.pe(v.reshape(B, C, H, W))
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/modules/conv.py", line 51, in forward
+    return self.act(self.bn(self.conv(x)))
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 143, in forward
+    self._check_input_dim(input)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 425, in _check_input_dim
+    if input.dim() != 4:
+KeyboardInterrupt
+Exception in thread Thread-6:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run

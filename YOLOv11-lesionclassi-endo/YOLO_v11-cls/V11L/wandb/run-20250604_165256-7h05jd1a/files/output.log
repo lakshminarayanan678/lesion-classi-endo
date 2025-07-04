@@ -1,0 +1,62 @@
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-cls.pt to 'yolo11l-cls.pt'...
+ 59%|█████████████████████████████████████████████████████████████████▊                                              | 16.0M/27.2M [00:04<00:03, 3.81MB/s]
+Traceback (most recent call last):
+  File "/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/V11L/train.py", line 19, in <module>
+    model = YOLO("yolo11l-cls.pt")
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/models/yolo/model.py", line 23, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 146, in __init__
+    self._load(model, task=task)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 289, in _load
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 912, in attempt_load_one_weight
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 817, in torch_safe_load
+    file = attempt_download_asset(weight)  # search online if missing locally
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/utils/downloads.py", line 453, in attempt_download_asset
+    safe_download(url=f"{download_url}/{release}/{name}", file=file, min_bytes=1e5, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/utils/downloads.py", line 340, in safe_download
+    torch.hub.download_url_to_file(url, f, progress=progress)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/hub.py", line 655, in download_url_to_file
+    buffer = u.read(READ_DATA_CHUNK)
+  File "/usr/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/usr/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1270, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1128, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/V11L/train.py", line 19, in <module>
+    model = YOLO("yolo11l-cls.pt")
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/models/yolo/model.py", line 23, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 146, in __init__
+    self._load(model, task=task)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 289, in _load
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 912, in attempt_load_one_weight
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/nn/tasks.py", line 817, in torch_safe_load
+    file = attempt_download_asset(weight)  # search online if missing locally
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/utils/downloads.py", line 453, in attempt_download_asset
+    safe_download(url=f"{download_url}/{release}/{name}", file=file, min_bytes=1e5, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/utils/downloads.py", line 340, in safe_download
+    torch.hub.download_url_to_file(url, f, progress=progress)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/hub.py", line 655, in download_url_to_file
+    buffer = u.read(READ_DATA_CHUNK)
+  File "/usr/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/usr/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1270, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1128, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt

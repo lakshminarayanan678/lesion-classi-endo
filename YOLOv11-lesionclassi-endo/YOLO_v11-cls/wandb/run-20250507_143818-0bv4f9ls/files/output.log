@@ -1,0 +1,925 @@
+New https://pypi.org/project/ultralytics/8.3.128 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.62 🚀 Python-3.8.10 torch-2.4.1+cu118 CUDA:0 (NVIDIA GeForce RTX 3090, 24126MiB)
+[34m[1mengine/trainer: [39m[22mtask=classify, mode=train, model=yolo11n-cls.pt, data=/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data, epochs=50, time=None, patience=100, batch=16, imgsz=224, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train2, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/classify/train2
+[34m[1mtrain:[39m[22m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/train... found 40122 images in 3 classes ✅
+[34m[1mval:[39m[22m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/val... found 10105 images in 3 classes ✅
+[34m[1mtest:[39m[22m /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/test... found 3756 images in 3 classes ✅
+Overriding model.yaml nc=80 with nc=3
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 10                  -1  1    334083  ultralytics.nn.modules.head.Classify         [256, 3]
+YOLO11n-cls summary: 151 layers, 1,534,947 parameters, 1,534,947 gradients, 3.3 GFLOPs
+Transferred 234/236 items from pretrained weights
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [39m[22mchecks passed ✅
+[34m[1mtrain: [39m[22mScanning /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/train... 40122 images, 0 corrupt: 100%|██████████| 40122/40122 [00:00<?, ?it/s]
+[34m[1mval: [39m[22mScanning /home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data/val... 10105 images, 0 corrupt: 100%|██████████| 10105/10105 [00:00<?, ?it/s]
+       1/50     0.262G      1.072         16        224:   0%|          | 1/2508 [00:00<27:12,  1.54it/s]
+[34m[1moptimizer:[39m[22m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[39m[22m SGD(lr=0.01, momentum=0.9) with parameter groups 39 weight(decay=0.0), 40 weight(decay=0.0005), 40 bias(decay=0.0)
+Image sizes 224 train, 224 val
+Using 8 dataloader workers
+Logging results to [1mruns/classify/train2
+Starting training for 50 epochs...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       1/50     0.264G      0.287         10        224: 100%|██████████| 2508/2508 [00:46<00:00, 54.22it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 58.87it/s]
+       2/50     0.264G     0.2053         16        224:   3%|▎         | 68/2508 [00:01<00:41, 59.22it/s]
+                   all      0.931          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       2/50     0.264G     0.2336         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 61.43it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 61.90it/s]
+       3/50     0.264G     0.2478         16        224:   2%|▏         | 57/2508 [00:00<00:39, 62.13it/s]
+                   all      0.922          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       3/50     0.264G     0.2922         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 61.72it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.91it/s]
+       4/50     0.264G     0.3269         16        224:   3%|▎         | 69/2508 [00:01<00:37, 64.61it/s]
+                   all      0.907          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       4/50     0.264G     0.4985         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 62.91it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.42it/s]
+       5/50     0.266G     0.4435         16        224:   0%|          | 7/2508 [00:00<00:38, 65.55it/s]
+                   all      0.865          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       5/50     0.266G      0.428         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 61.81it/s]
+
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 55.94it/s]
+                   all      0.858          1
+      Epoch    GPU_mem       loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       6/50     0.266G     0.3569         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 61.64it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 60.16it/s]
+                   all      0.878          1
+      Epoch    GPU_mem       loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       7/50     0.266G     0.3397         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 63.56it/s]
+
+
+               classes   top1_acc   top5_acc:  90%|████████▉ | 283/316 [00:04<00:00, 62.58it/s]
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 66.15it/s]
+       8/50     0.264G     0.3162         16        224:   4%|▍         | 99/2508 [00:01<00:37, 64.17it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       8/50     0.264G     0.3156         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 63.69it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 66.20it/s]
+       9/50     0.266G     0.3074         16        224:   3%|▎         | 65/2508 [00:01<00:37, 65.01it/s]
+                   all      0.909          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       9/50     0.266G     0.3023         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 63.82it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 63.88it/s]
+      10/50     0.266G     0.2688         16        224:   1%|          | 28/2508 [00:00<00:39, 62.03it/s]
+                   all      0.916          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      10/50     0.266G      0.287         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 63.39it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.36it/s]
+      11/50     0.266G     0.2543         16        224:   0%|          | 12/2508 [00:00<00:46, 54.10it/s]
+                   all      0.921          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      11/50     0.266G     0.2706         10        224: 100%|██████████| 2508/2508 [00:41<00:00, 59.92it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 65.78it/s]
+      12/50     0.264G     0.2381         16        224:   3%|▎         | 87/2508 [00:01<00:38, 63.00it/s]
+                   all      0.926          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      12/50     0.264G     0.2589         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 62.40it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.60it/s]
+                   all      0.928          1
+      Epoch    GPU_mem       loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      13/50     0.266G     0.2495         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 62.55it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 63.80it/s]
+      14/50     0.264G     0.2463         16        224:   1%|▏         | 35/2508 [00:00<00:39, 62.89it/s]
+                   all      0.936          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      14/50     0.266G     0.2422         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 61.74it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.92it/s]
+      15/50     0.264G     0.2483         16        224:   4%|▎         | 91/2508 [00:01<00:37, 63.71it/s]
+                   all       0.94          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      15/50     0.264G     0.2352         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 64.28it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.77it/s]
+      16/50     0.266G     0.2447         16        224:   3%|▎         | 73/2508 [00:01<00:36, 66.25it/s]
+                   all      0.942          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      16/50     0.266G     0.2296         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 62.04it/s]
+
+
+               classes   top1_acc   top5_acc:  97%|█████████▋| 307/316 [00:04<00:00, 62.60it/s]
+                   all      0.944          1
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.66it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      17/50     0.264G      0.223         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 63.08it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 65.48it/s]
+      18/50     0.266G     0.2054         16        224:   2%|▏         | 42/2508 [00:00<00:46, 52.57it/s]
+                   all      0.948          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      18/50     0.266G     0.2158         10        224: 100%|██████████| 2508/2508 [00:41<00:00, 60.63it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 59.03it/s]
+                   all      0.951          1
+      Epoch    GPU_mem       loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      19/50     0.264G     0.2087         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 61.74it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 62.52it/s]
+      20/50     0.266G     0.2165         16        224:   1%|          | 21/2508 [00:00<00:41, 59.26it/s]
+                   all      0.952          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      20/50     0.266G     0.2052         10        224: 100%|██████████| 2508/2508 [00:41<00:00, 61.09it/s]
+
+
+               classes   top1_acc   top5_acc:  99%|█████████▊| 312/316 [00:05<00:00, 52.35it/s]
+                   all      0.954          1
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 59.10it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      21/50     0.266G     0.2006         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 62.89it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 61.30it/s]
+      22/50     0.264G     0.1892         16        224:   1%|          | 28/2508 [00:00<00:38, 64.30it/s]
+                   all      0.954          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      22/50     0.264G     0.1964         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 62.70it/s]
+
+
+               classes   top1_acc   top5_acc:  90%|████████▉ | 283/316 [00:04<00:00, 68.99it/s]
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 63.81it/s]
+      23/50     0.266G     0.2322         16        224:   3%|▎         | 78/2508 [00:01<00:37, 65.38it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      23/50     0.266G     0.1926         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 63.88it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 63.78it/s]
+      24/50     0.264G     0.1541         16        224:   2%|▏         | 51/2508 [00:00<00:38, 63.76it/s]
+                   all      0.957          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      24/50     0.264G     0.1907         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 61.78it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 61.20it/s]
+      25/50     0.266G       0.19         16        224:   3%|▎         | 76/2508 [00:01<00:38, 62.71it/s]
+                   all      0.958          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      25/50     0.266G     0.1844         10        224: 100%|██████████| 2508/2508 [00:41<00:00, 60.77it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 60.76it/s]
+      26/50     0.264G     0.2299         16        224:   1%|          | 27/2508 [00:00<00:38, 63.65it/s]
+                   all      0.959          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      26/50     0.264G     0.1841         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 62.55it/s]
+
+
+               classes   top1_acc   top5_acc:  92%|█████████▏| 292/316 [00:04<00:00, 61.07it/s]
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 66.25it/s]
+      27/50     0.264G     0.1874         16        224:   3%|▎         | 83/2508 [00:01<00:44, 54.99it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      27/50     0.264G     0.1786         10        224: 100%|██████████| 2508/2508 [00:41<00:00, 59.85it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 58.19it/s]
+                   all       0.96          1
+      Epoch    GPU_mem       loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      28/50     0.266G     0.1767         10        224: 100%|██████████| 2508/2508 [00:44<00:00, 56.30it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 66.96it/s]
+      29/50     0.264G      0.154         16        224:   1%|          | 21/2508 [00:00<00:36, 67.25it/s]
+                   all      0.961          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      29/50     0.266G     0.1729         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 62.11it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:05<00:00, 63.13it/s]
+      30/50     0.266G     0.2193         16        224:   2%|▏         | 42/2508 [00:00<00:40, 61.59it/s]
+                   all      0.961          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      30/50     0.266G     0.1707         10        224: 100%|██████████| 2508/2508 [00:41<00:00, 61.00it/s]
+
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.08it/s]
+      31/50     0.266G     0.1532         16        224:   2%|▏         | 57/2508 [00:00<00:38, 63.71it/s]
+                   all      0.961          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      31/50     0.266G     0.1657         10        224: 100%|██████████| 2508/2508 [00:40<00:00, 62.36it/s]
+
+
+               classes   top1_acc   top5_acc:  93%|█████████▎| 293/316 [00:04<00:00, 69.31it/s]
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 64.50it/s]
+      32/50     0.266G     0.1743         16        224:   4%|▎         | 92/2508 [00:01<00:37, 65.11it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      32/50     0.266G     0.1646         10        224: 100%|██████████| 2508/2508 [00:38<00:00, 65.39it/s]
+
+               classes   top1_acc   top5_acc: 100%|██████████| 316/316 [00:04<00:00, 66.11it/s]
+      33/50     0.264G     0.1173         16        224:   0%|          | 7/2508 [00:00<00:37, 66.24it/s]
+                   all      0.962          1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      33/50     0.264G     0.1588         10        224: 100%|██████████| 2508/2508 [00:39<00:00, 64.20it/s]
+               classes   top1_acc   top5_acc:   8%|▊         | 25/316 [00:00<00:02, 101.19it/s]
+Traceback (most recent call last):
+  File "/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/train.py", line 19, in <module>
+    results = model.train(data="/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data", epochs=50, imgsz=224)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 806, in train
+    self.trainer.train()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 432, in _do_train
+    self.metrics, self.fitness = self.validate()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 605, in validate
+    metrics = self.validator(self)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/validator.py", line 171, in __call__
+    for batch_i, batch in enumerate(bar):
+  File "/home/endodl/.local/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/build.py", line 48, in __iter__
+    yield next(self.iterator)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1324, in _next_data
+    return self._process_data(data)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+    data.reraise()
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/_utils.py", line 706, in reraise
+    raise exception
+cv2.error: Caught error in DataLoader worker process 1.
+Original Traceback (most recent call last):
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/dataset.py", line 475, in __getitem__
+    im = Image.fromarray(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.11.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+Traceback (most recent call last):
+  File "/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/train.py", line 19, in <module>
+    results = model.train(data="/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/YOLO_v11n-cls/data", epochs=50, imgsz=224)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/model.py", line 806, in train
+    self.trainer.train()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 432, in _do_train
+    self.metrics, self.fitness = self.validate()
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/trainer.py", line 605, in validate
+    metrics = self.validator(self)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/engine/validator.py", line 171, in __call__
+    for batch_i, batch in enumerate(bar):
+  File "/home/endodl/.local/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/build.py", line 48, in __iter__
+    yield next(self.iterator)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1324, in _next_data
+    return self._process_data(data)
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+    data.reraise()
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/_utils.py", line 706, in reraise
+    raise exception
+cv2.error: Caught error in DataLoader worker process 1.
+Original Traceback (most recent call last):
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/endodl/.local/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/endodl/.local/lib/python3.8/site-packages/ultralytics/data/dataset.py", line 475, in __getitem__
+    im = Image.fromarray(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.11.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'

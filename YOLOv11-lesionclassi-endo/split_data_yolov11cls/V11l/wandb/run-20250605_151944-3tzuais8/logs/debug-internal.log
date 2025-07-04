@@ -1,0 +1,22 @@
+{"time":"2025-06-05T15:19:44.997297559+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/home/endodl/PHASE-1/mln/lesions_cv24/MAIN/data1/split_data_yolov11ncls/V11l/wandb/run-20250605_151944-3tzuais8/logs/debug-core.log"}
+{"time":"2025-06-05T15:19:45.573891193+05:30","level":"INFO","msg":"created new stream","id":"3tzuais8"}
+{"time":"2025-06-05T15:19:45.573972139+05:30","level":"INFO","msg":"stream: started","id":"3tzuais8"}
+{"time":"2025-06-05T15:19:45.574125853+05:30","level":"INFO","msg":"handler: started","stream_id":"3tzuais8"}
+{"time":"2025-06-05T15:19:45.574132603+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"3tzuais8"}
+{"time":"2025-06-05T15:19:45.574179827+05:30","level":"INFO","msg":"sender: started","stream_id":"3tzuais8"}
+{"time":"2025-06-05T15:19:46.083595465+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-05T15:19:49.348201045+05:30","level":"WARN","msg":"sender: sendUseArtifact: job builder disabled, skipping"}
+{"time":"2025-06-05T15:22:57.100039645+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/lakshminarayanan-/capsule_vision_challenge_2024/3tzuais8/file_stream\": dial tcp: lookup api.wandb.ai on 127.0.0.53:53: read udp 127.0.0.1:44549->127.0.0.53:53: i/o timeout"}
+{"time":"2025-06-05T15:29:23.979870838+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/lakshminarayanan-/capsule_vision_challenge_2024/3tzuais8/file_stream\": dial tcp: lookup api.wandb.ai on 127.0.0.53:53: read udp 127.0.0.1:32780->127.0.0.53:53: i/o timeout"}
+{"time":"2025-06-05T15:34:27.099335599+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/lakshminarayanan-/capsule_vision_challenge_2024/3tzuais8/file_stream\": dial tcp: lookup api.wandb.ai on 127.0.0.53:53: read udp 127.0.0.1:33104->127.0.0.53:53: i/o timeout"}
+{"time":"2025-06-05T16:15:39.574897515+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/lakshminarayanan-/capsule_vision_challenge_2024/3tzuais8/file_stream\": dial tcp: lookup api.wandb.ai on 127.0.0.53:53: read udp 127.0.0.1:48130->127.0.0.53:53: i/o timeout"}
+{"time":"2025-06-05T16:16:02.517944298+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/lakshminarayanan-/capsule_vision_challenge_2024/3tzuais8/file_stream\": dial tcp: lookup api.wandb.ai on 127.0.0.53:53: read udp 127.0.0.1:43037->127.0.0.53:53: i/o timeout"}
+{"time":"2025-06-05T16:48:20.059516481+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-05T16:48:20.059595479+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-05T16:48:21.062797667+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.130978187},{"desc":"uploading wandb-summary.json","runtime_seconds":0.130929756}],"total_operations":2}}
+{"time":"2025-06-05T16:48:21.695848797+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-05T16:48:22.627509485+05:30","level":"INFO","msg":"stream: closing","id":"3tzuais8"}
+{"time":"2025-06-05T16:48:22.627544736+05:30","level":"INFO","msg":"handler: closed","stream_id":"3tzuais8"}
+{"time":"2025-06-05T16:48:22.627561785+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"3tzuais8"}
+{"time":"2025-06-05T16:48:22.627695865+05:30","level":"INFO","msg":"sender: closed","stream_id":"3tzuais8"}
+{"time":"2025-06-05T16:48:22.627769985+05:30","level":"INFO","msg":"stream: closed","id":"3tzuais8"}
