@@ -7,3 +7,6 @@
 [submodule "eva02_lesionclassifi_endoscopy"]
 	path = eva02_lesionclassifi_endoscopy
 	url = https://github.com/lakshminarayanan678/eva02_lesionclassifi_endoscopy.git
+[submodule "flater-lesionclassi-endo"]
+	path = flater-lesionclassi-endo
+	url = https://github.com/lakshminarayanan678/flater-lesionclassi-endo.git
