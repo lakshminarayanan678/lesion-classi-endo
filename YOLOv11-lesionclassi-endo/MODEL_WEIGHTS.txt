@@ -1,0 +1,5 @@
+https://drive.google.com/drive/folders/154L93ZmNW4_3HlS4Iar83N5ColpaJbB-?usp=sharing
+The drive link contains the weights for the YOLOv11n and YOLOv11l lesion classification endoscopy project, 
+it has the weights of both 
+AIIMS_test_split &
+Internal_test_split (wherien AIIMAS dataset is used for training and then then tested internally)
